@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">SmartLedController</string>
+    <string name="smart_led_control_panel">Smart Led Control panel</string>
+    <string name="icon">icon</string>
+    <string name="select_led_chipset">Select Led Chipset</string>
+    <string name="enter_the_number_of_LEDs_per_staircase">Enter the number of LEDs per staircase</string>
+    <string name="enter_the_number_of_stair_cases">Enter the number of stair-cases</string>
+    <string name="default_number_of_stair_cases">7</string>
+    <string name="default_number_of_LEDs_per_stair_case">60</string>
+    <string name="enter_leds_solid_color">Enter LEDs solid color</string>
+    <string name="select_LEDs_solid_color">Select LEDs solid color</string>
+    <string name="select_animation_mode">Select animation mode</string>
+    <string name="LEDsTurnedOnTimer">10</string>
+    <string name="enter_LEDs_turned_on_timer">Enter LEDs turned on timer</string>
+
+    <string-array name="led_strip_chipsets">
+        <item>APA102/DOTSTAR</item>
+        <item>WS2811</item>
+        <item>WS2812B/NEOPIXEL</item>
+        <item>TM1809/TM1812</item>
+        <item>TM1803</item>
+        <item>TM1804</item>
+        <item>WS2801</item>
+        <item>UCS1903</item>
+        <item>UCS2903</item>
+        <item>LPD8806</item>
+        <item>P9813</item>
+        <item>SM16716</item>
+        <item>TM1829</item>
+        <item>TLS3001</item>
+        <item>TLC5940</item>
+        <item>TLC5947</item>
+        <item>LPD1886</item>
+    </string-array>
+
+    <string-array name="led_animation_modes">
+        <item>Solid Color</item>
+        <item>Instant Stair Case</item>
+    </string-array>
+</resources>

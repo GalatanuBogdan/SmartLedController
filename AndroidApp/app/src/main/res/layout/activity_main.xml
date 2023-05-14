@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="152dp">
+
+        <TextView
+            android:id="@+id/smartLedControlPanelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="100dp"
+            android:text="@string/smart_led_control_panel"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="103dp"
+            android:layout_height="73dp"
+            android:layout_below="@+id/smartLedControlPanelText"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="100dp"
+            android:contentDescription="@string/icon"
+            android:src="@drawable/led_icon"
+            android:clickable="true"
+            android:onClick="updateTorchState"
+            android:focusable="true" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/round_back_white10_20"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/selectLedChipsetText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/select_led_chipset"
+                    android:textColor="@color/white"
+                    tools:ignore="RelativeOverlap" />
+
+                <Spinner
+                    android:id="@+id/spinner_chipsets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/white"
+                    tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/EnterNumOfStaircases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/enter_the_number_of_stair_cases"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/input_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="30dp"
+                    android:autofillHints=""
+                    android:hint="@string/default_number_of_stair_cases"
+                    android:inputType="number"
+                    android:textColor="#2196F3"
+                    android:textColorHint="#2196F3"
+                    tools:ignore="RelativeOverlap,TouchTargetSizeCheck" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:id="@+id/EnterNumOfLedPerStair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/enter_the_number_of_LEDs_per_staircase"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/input_number_of_LEDs_per_stair_case"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="30dp"
+                    android:autofillHints=""
+                    android:hint="@string/default_number_of_LEDs_per_stair_case"
+                    android:inputType="number"
+                    android:textColor="#2196F3"
+                    android:textColorHint="#2196F3"
+                    tools:ignore="RelativeOverlap,TouchTargetSizeCheck" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/select_animation_modes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/select_animation_mode"
+                    android:textColor="@color/white"
+                    tools:ignore="RelativeOverlap" />
+
+                <Spinner
+                    android:id="@+id/spinner_animationModes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/white"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/EnterLEDsTurnedOnTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/enter_LEDs_turned_on_timer"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/inputLEDsTurnedOnTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="30dp"
+                    android:autofillHints=""
+                    android:hint="@string/LEDsTurnedOnTimer"
+                    android:inputType="number"
+                    android:textColor="#2196F3"
+                    android:textColorHint="#2196F3"
+                    tools:ignore="RelativeOverlap,TouchTargetSizeCheck" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:id="@+id/enterLedSolidColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/select_LEDs_solid_color"
+                    android:textColor="@color/white"/>
+
+                <View
+                    android:id="@+id/colorPickerButton"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="30dp"
+                    android:background="@color/secondary"
+                    android:onClick="onClickColorPicker"
+                    tools:ignore="RelativeOverlap,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
